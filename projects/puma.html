@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/d4fa596027.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Neu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .textOrangeColor {
+        color: #f58035;
+      }
+      .textPurpleColor {
+        color: #9f35ed;
+      }
+      #fullpage {
+        margin: auto;
+        width: 90%;
+        border: 2px solid black;
+      }
+      #navbar {
+      
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #leftNav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 22%;
+        
+      }
+
+      #rightNav {
+        width: 70%;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #firstRightNav {
+        padding-left: 20px;
+        width: 56%;
+        height: 40px;
+        
+        display: flex;
+        align-items: center;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+      }
+
+      #firstRightNav input {
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        background-color: #f4f4f4;
+      }
+
+      #firstRightNav i {
+        color: gray;
+      }
+
+      #secondRightNav {
+        width: 15%;
+      
+        display: flex;
+        align-items: center;
+      }
+
+      
+      #secondRightNav > div {
+        width: 60%;
+        margin: auto;
+        
+        display: flex;
+        justify-content: space-around;
+        border-radius: 12px;
+        background-color: #eee6f5;
+        align-items: center;
+      }
+      #thirdRightNav {
+        width: 15%;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #thirdRightNav div:nth-child(1) {
+        
+        width: 23%;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #f4e9fc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #thirdRightNav div:nth-child(2) {
+        
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #thirdRightNav div:nth-child(3) {
+        
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #thirdRightNav p {
+        font-size: 12px;
+        font-weight: bolder;
+      }
+      #body {
+        height: 1500px;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div id="navbar">
+        <div id="leftNav">
+          <div style="height: 100%">
+            <img
+              style="width: 100%; height: 100%"
+              alt="icon"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAgVBMVEUAAAD////8/Pzc3Nw/Pz/S0tJ+fn4EBAT29vbx8fFNTU3Nzc2enp5lZWWvr68TExNxcXEcHBwiIiJERETCwsLi4uK7u7ulpaXGxsaGhobg4ODo6OiAgICNjY0rKyvX19czMzNaWlp2dnY6OjqXl5dVVVVJSUlgYGAvLy9tbW21tbVhYetPAAADuElEQVR4nO3b2XKiQBSAYRpUJO4b0RCjUTOOvv8DTgOSoNMICgJp/6+SiyzVdTx1egfDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+KUG8ns0MOwCmmosWkU0Uztz17Bn0wIa2s6FEFYBDdXNlxD9phAvuRvaicCwgJhqZiVM/5OtNp+jPM0MOmGGxKKowOqi0fQzdPqyuo172xl5pwyJryLDq4GWuLDa3NfQd4Y0G4tsoxn2soj/g9e6o6VO1I55dx3W1Lh9WUW+t55x4xJgFyXYmjwo0qo0PEWCTPlJpx83tTM5lVBQgHotjLzzbhbTvmlekt1VJnb2/qg4K9RMTJEQnXHmZnpB5XUfGGh1Rp1ovlcVUi9rM5ZswdFtrv+2SKwimbfXbG3IIhKzx4ZZHTmyLuUs1FGP2qZoDrK0IkvRybUwr7sPf/JaJIxJ3p/0Caoh/29fQqBVWyX0NjN9U9qX2+ASIqxcQoqkZdpKpy3amfrjL/V34a7eVvNd10ye/VNKRO7yduUEW4l+Yl5+upoQ86ttWMLRaz19ZpqeocDsyipyr+uaMdAQV7pXrI7kujB5cyqXjRpP+D0/Ac7RE/FUmUKZOLk/tVX9SS6rjqUHXp6BfxIie8nhbDprq7qfKVzlrPUi/6bbAdGZnsxRsBHbd8IO5fepF6NlqurIUayQxo7c7pYddZlsY/wefe71zgpK6OgPLEPVxlZuRy4vSdaO/O2h5KgrtZ5EB2mHhN1/J0hSNCYNTZ33r2kOygz5B6+LKI2TedA5tT0DSWEbn44qRf4YZc7c7nLXt8JC0/GgMauP5F1brKruuSzRhX+SpLwdict+LqmrcdcR6oVkWEI3nG5rbOiqxqQTjfdmt1lvum5z5jmO+V9JPdWSKIvB3r1YLjlVh1RDW+u8qz3zhJaof9bXmlWHU0vH+KRmanzemMPZndvTL4yUDvEUZbyvfTZWbFpjMFLaxFLkVR1MTTmxk26dLxlziN++basOpp7WsRQ964lamvnPaMSsrxYrozuf0tbfKylK5ZGiNJMoRRq+NlQM21icRuxl1aHUlf2949fspZhidcIntluavdBQqLegjNpcgyQbhG+QOD3qKIFtjKzg5JHLokR2uKGVlaTxk3z5bdom2/0UwTFt/vfXdfbpp0i7184LtfdT9LRPqmWyZxuS5itcPzKnJduGp/zMaVc4XKelmXIpm2YvtH3/vDAuVZTq1XyOd2NzaXAachXpAQAAAAAAAAAAAAAAAAAAAAAAAIDq/AMt6x0FHJgffAAAAABJRU5ErkJggg=="
+            />
+          </div>
+          <a href="/login">new</a>
+          <a href="/login">women</a>
+          <a href="/login">new</a>
+          <a href="/login">Fenty*Puma</a>
+          <a href="/login">Motorsport</a>
+          <a href="/login">Collaborations</a>
+          <a href="/login">Sports</a>
+          <a href="/login">Outlet</a>
+
+        </div>
+        <div id="rightNav">
+          <div id="firstRightNav">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input placeholder="Search" />
+          </div>
+          <div id="secondRightNav">
+            <div>
+              <div>
+                <p>Neu</p>
+                <p class="textOrangeColor">Pass</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div id="thirdRightNav">
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <p>Mumbai</p>
+              <p class="textPurpleColor">400000</p>
+            </div>
+            <div>
+              <i class="fa-regular fa-user"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="body">Body</div>
+      <div>Footer</div>
+    </div>
+  </body>
+</html>
